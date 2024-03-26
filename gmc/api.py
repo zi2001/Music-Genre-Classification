@@ -7,6 +7,7 @@ import librosa
 import io
 import numpy as np
 from tensorflow.keras.models import load_model
+from gmc.params import GENRES
 
 app = FastAPI()
 
@@ -67,6 +68,4 @@ async def receive_music(mus: UploadFile):
 
 
 
-    return { "prediction": float(index[0]) }
-
-#return { "prediction":GENRES[float(index[0])] }
+    return { "prediction":GENRES[int(index[0])] }
