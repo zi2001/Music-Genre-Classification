@@ -7,6 +7,7 @@ import librosa
 import io
 import numpy as np
 from tensorflow.keras.models import load_model
+from gmc.params import GENRES
 
 app = FastAPI()
 
@@ -32,26 +33,34 @@ async def receive_music(mus: UploadFile):
     ### Receiving and decoding the image
     contents = await mus.read()
 
-    y, sr = librosa.load(io.BytesIO(contents), sr=None)
+    input_y, sr = librosa.load(io.BytesIO(contents), sr=None)
+
+
+
+    y = input_y[0:0 + sr * 5]
+
+
+
+
+
+
     mel_spectrogram = librosa.feature.melspectrogram(y=y, sr=sr, n_mels=128, fmax=8000)
-    mel_spectrogram = mel_spectrogram.astype(np.float32)
+    #mel_spectrogram = mel_spectrogram.astype(np.float32)
+    # Extract Mel spectrogram
 
-  # MFCCs
-    mfccs = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=20)
 
-  # Chroma features
-    chroma_stft = librosa.feature.chroma_stft(y=y, sr=sr, n_chroma=12)
+    # Extract MFCC features
+    mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
 
-  # Spectral Centroid
-    spectral_centroid = librosa.feature.spectral_centroid(y=y, sr=sr)
+    # Combine Mel spectrogram and MFCC features
+    audio_features = np.concatenate((mel_spectrogram, mfcc), axis=0)
+    audio_features = audio_features.astype(np.float32)  # Convert to float32 for CNN
 
-  # Combine features
-    features = np.vstack([mel_spectrogram, mfccs, chroma_stft, spectral_centroid])
-    print(features.shape)
-    features = np.expand_dims(features,axis=0)
-    print(features.shape)
 
-    prediction = model.predict([features])
+    audio_features = np.expand_dims(audio_features,axis=0)
+
+
+    prediction = model.predict([audio_features])
     index = list(np.argsort(prediction)[0][-1:])
     print(index)
     print(prediction)
@@ -59,6 +68,4 @@ async def receive_music(mus: UploadFile):
 
 
 
-    return { "prediction": float(index[0]) }
-
-#return { "prediction":GENRES[float(index[0])] }
+    return { "prediction":GENRES[int(index[0])] }
