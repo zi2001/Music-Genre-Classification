@@ -32,7 +32,7 @@ The dataset used in this project is sourced from a Kaggle competition. It includ
 Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for any bugs or feature requests.
 
 ## Authors
-**Kyrillos Tadros**
+**Kyrillos Tadros**, 
 **Zineb Hilary Hamdi**
 
 ## Acknowledgements
