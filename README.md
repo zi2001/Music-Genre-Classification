@@ -17,21 +17,6 @@ This project aims to classify music genres using a Convolutional Neural Network 
 - **Librosa:** Python package for music and audio analysis, used for feature extraction.
 - **Google Cloud Platform (GCP):** Initially used for model deployment, now decommissioned due to cost considerations.
 
-## Project Structure
-The project is organized as follows:
-Music-Genre-Classification/
-├── data/ # Directory containing the dataset
-├── src/ # Directory containing the source code
-│ ├── data_preprocessing.py # Script for extracting features (spectrograms and MFCC) from audio files
-│ ├── model.py # Script for building and training the CNN model
-│ ├── train.py # Script for training the model
-│ ├── evaluate.py # Script for evaluating the model
-├── notebooks/ # Jupyter notebooks for exploratory data analysis and model experimentation
-├── requirements.txt # List of dependencies required to run the project
-├── README.md # Project README file
-└── deploy/ # Directory containing deployment instructions and code for GCP
-
-
 ## Deployment
 Note: The Google Cloud Platform (GCP) deployment has been decommissioned due to cost considerations. 
 
