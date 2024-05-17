@@ -4,6 +4,9 @@
 ## Overview
 This project aims to classify music genres using a Convolutional Neural Network (CNN) model. The model is trained on audio features extracted from music tracks, specifically spectrograms and Mel-Frequency Cepstral Coefficients (MFCC). The project leverages advanced machine learning techniques to achieve high accuracy in genre classification.
 
+## Data
+The dataset used in this project is sourced from a Kaggle competition. It includes approximately 10,000 songs spanning 10 different genres, providing a robust foundation for training and evaluating the model.
+
 ## Features
 - **Spectrograms:** Visual representations of the spectrum of frequencies in a sound sample.
 - **MFCC (Mel-Frequency Cepstral Coefficients):** Coefficients that collectively make up an MFC, representing the short-term power spectrum of a sound.
