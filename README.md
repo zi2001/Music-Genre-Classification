@@ -21,7 +21,9 @@ The dataset used in this project is sourced from a Kaggle competition. It includ
 - **Google Cloud Platform (GCP):** Initially used for model deployment, now decommissioned due to cost considerations.
 
 ## Deployment
-Note: The Google Cloud Platform (GCP) deployment has been decommissioned due to cost considerations. 
+The Google Cloud Platform (GCP) deployment has been decommissioned due to cost considerations. 
+Docker: Used for containerization to ensure consistent and scalable deployment.
+Streamlit: Utilized for creating a user-friendly interface.
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for any bugs or feature requests.
