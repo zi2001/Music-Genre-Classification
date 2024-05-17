@@ -15,22 +15,25 @@ The dataset used in this project is sourced from a Kaggle competition. It includ
 - **Convolutional Neural Network (CNN):** A deep learning model used for image recognition tasks, adapted here for audio signal processing.
 
 ## Tools and Technologies
-- **Python:** Programming language used for developing the model.
-- **TensorFlow and Keras:** Libraries used for building and training the CNN.
-- **Librosa:** Python package for music and audio analysis, used for feature extraction.
-- **Google Cloud Platform (GCP):** Initially used for model deployment, now decommissioned due to cost considerations.
+- **Python**: Programming language used for developing the model.
+- **TensorFlow and Keras**: Libraries used for building and training the CNN.
+- **Librosa**: Python package for music and audio analysis, used for feature extraction.
+- **Google Cloud Platform (GCP)**: Used for model deployment.
+- **Streamlit**: Used for building the user interface.
+- **Docker**: Utilized for containerization and deployment.
 
 ## Deployment
-The Google Cloud Platform (GCP) deployment has been decommissioned due to cost considerations. 
-Docker: Used for containerization to ensure consistent and scalable deployment.
-Streamlit: Utilized for creating a user-friendly interface.
+- **End-to-End Solution**: Built an API for seamless integration.
+- **Google Cloud Platform (GCP)**: Deployed the model on GCP for scalability and reliability.
+- **Streamlit Interface**: Created a user-friendly interface using Streamlit for an intuitive experience.
+- **Docker**: Used for containerization to ensure consistent and scalable deployment.
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for any bugs or feature requests.
 
 ## Authors
-Kyrillos Tadros
-Zineb Hilary Hamdi
+**Kyrillos Tadros**
+**Zineb Hilary Hamdi**
 
 ## Acknowledgements
 This project was built during the Data Science and AI bootcamp at Le Wagon.
